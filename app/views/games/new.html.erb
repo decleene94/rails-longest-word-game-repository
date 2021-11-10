@@ -1,0 +1,8 @@
+<h1>Please select from the letters below:</h1>
+<%= @letters %>
+<h3>What is the longest word you can think of?</h3>
+<form action="/score" method="post">
+  <input type="text" name="word">
+  <input type="submit" value="try!">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+</form>
